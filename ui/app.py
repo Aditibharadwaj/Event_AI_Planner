@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from agents.orchestrator import ConferenceOrchestrator
 from tools.data_loader import load_events, summarize_dataset, MUSIC_CATEGORIES, SPORTS_CATEGORIES
