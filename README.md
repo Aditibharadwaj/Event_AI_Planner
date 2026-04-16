@@ -9,6 +9,7 @@ This project presents an **AI-powered multi-agent system** that automates end-to
 
 ---
 ## 2. System Overview  
+![architecture](images/architecture.png)
 
 The system follows a **modular multi-agent architecture**, where each agent specializes in one part of the event lifecycle.  
 
@@ -32,7 +33,6 @@ The system follows a **modular multi-agent architecture**, where each agent spec
 | Pricing Agent | Predicts pricing and attendance |
 | GTM Agent | Builds marketing strategy |
 | Event Ops Agent | Generates schedule and detects conflicts |
----
 
 ### Orchestrator 
 
@@ -192,10 +192,3 @@ The dataset covers 69 unique events (2025–2026) across:
 - **Categories**: AI, Web3, ClimateTech, SaaS, Music Festivals, Sports, Startup/Tech
 - **Extraction method**: Manual curation from event websites, Eventbrite, LinkedIn Events, and Luma
 - **Deduplication**: Matched on normalized Event Name + Year; XLSX version kept when conflicts existed
-
-## Team
-
-- Aditi B R  
-- Ansul  
-- Vaishnavi Kolgane  
-- Vanshmeet Kour 
