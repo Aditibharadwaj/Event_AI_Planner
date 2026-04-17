@@ -51,6 +51,7 @@ The **Orchestrator** is the central coordination engine responsible for managing
 
 ---
 ## 4. Agent Design  
+![Agent_architecture](images/agents_architecture.png)
 
 | Agent | Primary Function | Output |
 |------|----------------|--------|
@@ -63,7 +64,10 @@ The **Orchestrator** is the central coordination engine responsible for managing
 | Event Ops Agent | Scheduling | Conflict-free agenda |
 
 ---
-## 5. Results  
+## 5. Data Architecture 
+![data_architecture](images/Data_architecture.png)
+
+## 6. Results  
 
 The system generates a **complete conference plan** via a Streamlit dashboard.
 
@@ -83,7 +87,7 @@ The system generates a **complete conference plan** via a Streamlit dashboard.
 🔗 [Event AI Planner](https://event-ai-planner.streamlit.app/)
 
 ---
-## 6. Project Structure
+## 7. Project Structure
 
 ```
 ## 🖥️ Project Structure
@@ -129,18 +133,6 @@ Expected columns:
 - Website, Data Source
 
 
-## How Each Agent Works
-
-| Agent | Input | Output | Data Used |
-|-------|-------|--------|-----------|
-| Sponsor | category, geography, size | Top sponsors + email template | Historical sponsor frequency |
-| Speaker | category, geography, size | Speaker list + agenda | Historical speaker frequency |
-| Exhibitor | category, geography, budget | Clustered exhibitors + pricing | Historical exhibitor data |
-| Venue | city, size, budget | 5 venues with scorecards | City tier + past events |
-| Pricing | category, geography, size | 3 pricing tiers + revenue model | Historical price statistics |
-| GTM | category, geography, date | Communities + 8-week plan |  |
-| Event Ops | speakers from above | Full schedule + risk register | Dataset |
-
 ## Tech Stack
 
 - **AI**: Groq (LLaMA models for all agent reasoning)
@@ -153,6 +145,6 @@ Expected columns:
 
 The dataset covers 120+ unique events (2025–2026) across:
 - **Geographies**: USA, Europe, India, Singapore
-- **Categories**: AI, Web3, ClimateTech, SaaS, Music Festivals, Sports, Startup/Tech
+- **Categories**: AI, Web3, ClimateTech, Music Festivals, Sports, Tech
 - **Extraction method**: Manual curation from event websites, Eventbrite, LinkedIn Events, and Luma
 - **Deduplication**: Matched on normalized Event Name + Year; XLSX version kept when conflicts existed
